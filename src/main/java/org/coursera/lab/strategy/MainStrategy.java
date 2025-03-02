@@ -29,19 +29,21 @@ class RacingHandling implements HandlingStrategy{
 }
 
 class Sedan extends Car{
-    //set handling at time of creation
+    //set handling at time of creation using strategy
     Sedan(HandlingStrategy handle){
         super("Sedan", handle);
     }
 }
 
 class Coupe extends Car{
+    //set handling at time of creation using strategy
     Coupe(HandlingStrategy handle){
         super("Coupe", handle);
     }
 }
 
 class Convertible extends Car{
+    //set handling at time of creation using strategy
     Convertible(HandlingStrategy handle){
         super("Convertible", handle);
     }
@@ -74,7 +76,7 @@ public class MainStrategy {
 class Car {
     String type;
     String name;
-    // where strategy variable is held in class
+    // where strategy is being composited in class
     HandlingStrategy handlingStrategy;
     protected static int carCounter = 0;
 
